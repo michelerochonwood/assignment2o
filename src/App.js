@@ -1,23 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+// shared components
+import Header from "./views/shared/Header";
+import Footer from "./views/shared/Footer";
+
+// page components
+import Home from "./views/Home";
+import About from "./views/About";
+import Contact from "./views/Contact";
+import Services from "./views/Services";
+import Blog from "./views/Blog";
+import Post from "./views/Post";
+import CreatePost from "./views/create-post";
+
+// dependencies
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createContext, useContext, useState } from "react"; // for sharing state between components
+
+// global Context (like a global or session var container)
+export const CounterContext = createContext();
 
 function App() {
+  // set state variable for a session click count
+  const [sessionCounter, setSessionCounter] = useState(0);
+
+  // public function to increment the session var; available to any child component
+  const handleIncrement = () => setSessionCounter(sessionCounter + 1);  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* wrap all components in the context so it can be shared among all */}
+      <CounterContext.Provider value={{ sessionCounter, handleIncrement }}>
+        {/* jsx comment style */}
+        <Header username='rfreeman' />
+        <main>
+          {/* use classes from react-router-dom to set up the url mapping for each page */}
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home username='mrochon' displayName='Michele' />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/post/:id" element={<Post />} />
+              <Route path="/create-post" element={<CreatePost username='mrochon' />} />
+            </Routes>
+          </BrowserRouter>
+        </main>
+        <Footer />
+      </CounterContext.Provider>
     </div>
   );
 }
