@@ -1,13 +1,151 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300;0,5..1200,400;0,5..1200,500;0,5..1200,600;0,5..1200,700;0,5..1200,800;0,5..1200,900;1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,600;1,5..1200,700;1,5..1200,800;1,5..1200,900&display=swap');
+
+h1, h2, h4, h5, h6 {
+    font-family: 'Roboto', serif;
+}
+h1 {
+    padding-top: 20px;
+    font-size: 18pt;
+    font-weight: 800;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', serif;
+  margin-bottom: 200px; /* Add space at the bottom for the footer */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+footer {
+  margin-top: 100px;
 }
+.custom-navbar {
+  background-color: rgba(4, 2, 12, 0.667); /* Set the desired background color with rgba values */
+  color: rgba(4, 2, 12, 0.667) (4, 2, 12); /* Set the text color to contrast with the background */
+  padding: 15px; /* Adjust padding as needed */
+  font-family: "Roboto";
+}
+
+.small-bold {
+  font-weight: 900;
+}
+
+.rounded-column {
+  background-color: rgba(52, 25, 160, 0.3);
+  padding: 20px;
+  border-radius: 0px;
+}
+
+.carousel-caption h6 {
+  font-size: 18px;
+  font-weight: 800;
+  color: rgba(242, 222, 242, 0.5); /* Text color */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+p {
+  background-color: rgba(248, 247, 249, 0.3);
+  padding: 10px;
+  border-radius: 0px;
+  font-size: 10pt; 
+  font-weight: 200;
+}
+
+.carousel-indicator-text {
+
+  font-size: 8px;
+  font-weight: 800;
+  color: #f7f7f8; /* or any other color */
+}
+
+.emphasize {
+  font-weight:700;
+  font-size: 12pt;
+  line-height: 1.5em;
+}
+
+.emphasize2 {
+  font-weight:700;
+  font-size: 12pt;
+  line-height: 1.5em;
+  text-align: center;
+}
+.emphasize3 {
+  font-weight:700;
+  font-size: 12pt;
+  line-height: 1.5em;
+  text-align: right;
+}
+
+.centered-text {
+  text-align: center;
+  /* Add other styles as needed */
+}
+
+.navbar-brand {
+  display: grid;
+  grid-template-areas: 
+    "logo brand-info";
+  grid-template-columns: auto 1fr; /* Adjust the width of the logo column as needed */
+  align-items: center;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.brand-info {
+  grid-area: brand-info;
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+h3 {
+  font-family: "Playfair";
+  font-size: 22pt;
+  font-weight: 800;
+  padding-top: 50px;
+}
+
+p.plain {
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 14pt;
+  padding-bottom: 80px;
+}
+
+p.plainAccordion {
+  font-size: 12pt;
+  font-weight: 500;
+  line-height: normal;
+  padding: 2px;
+  color: white;
+}
+
+.rounded-columndark {
+  background-color:#343a40;
+  padding: 10px;
+  border-radius: 0px;
+  text-align: center;
+}
+
+.rounded-columnlight {
+  background-color:#b0b3b7;
+  padding: 10px;
+  border-radius: 0px;
+  text-align: center;
+}
+
+p.plainAccordionDark {
+  font-size: 12pt;
+  font-weight: 500;
+  line-height: normal;
+  padding: 2px;
+  color: rgb(63, 43, 79);
+}
+
+.centered-accordion-button {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+

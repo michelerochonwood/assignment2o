@@ -9,7 +9,6 @@ import Contact from "./views/Contact";
 import Services from "./views/Services";
 import Blog from "./views/Blog";
 import Post from "./views/Post";
-import CreatePost from "./views/create-post";
 
 // dependencies
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -41,7 +40,6 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/post/:id" element={<Post />} />
-              <Route path="/create-post" element={<CreatePost username='mrochon' />} />
             </Routes>
           </BrowserRouter>
         </main>

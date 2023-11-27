@@ -1,13 +1,23 @@
 import React from "react";
-
+const michele3 = 'https://raw.githubusercontent.com/michelerochonwood/imagesReact/main/michele3.png';
 
     function Header(User) {
         return (
-          <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+          <nav className="navbar navbar-expand-lg custom-navbar" data-bs-theme="dark">
             <div className="container-fluid">
-              <a className="navbar-brand" href="/">
-                Career Profile
-              </a>
+            <a className="navbar-brand" href="/">
+          <img
+            src={michele3}
+            alt="Michele Logo"
+            width="45"
+            height="auto"
+            className="logo"
+          />
+          <div className="brand-info">
+            <h4>CAREER PROFILE</h4>
+            <h6>Michele Rochon-Wood</h6>
+          </div>
+        </a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -25,26 +35,21 @@ import React from "react";
                     <a className="nav-link" href="/" id="home">
                       Home
                     </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/about" id="about">
-                      About
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/contact" id="contact">
-                      Contact
-                    </a>
-                  </li>
+                    </li>
                   <li className="nav-item">
                     <a className="nav-link" href="/services" id="services">
-                      Services
+                      Skillset
                     </a>
 
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="/blog" id="blog">
-                      Blog
+                      Portfolio
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/contact" id="contact">
+                      Contact Michele
                     </a>
                   </li>
                   <li className="nav-item">
