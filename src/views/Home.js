@@ -1,6 +1,6 @@
 import React from 'react';
-import MyCarousel from '../components/Carousel'; // Adjust the path based on your actual file structure
-import Accordion from '../components/Accordion'; // Adjust the path based on your actual file structure
+import MyCarousel from '../components/Carousel'; 
+import Accordion from '../components/Accordion';
 
 const Home = () => {
   return (

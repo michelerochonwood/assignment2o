@@ -149,3 +149,22 @@ p.plainAccordionDark {
   align-self: center;
 }
 
+.micheleButton {
+  color: white;
+  background-color: #343a40;
+  align-items: right;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  float: right;
+}
+
+p.plainReferences {
+  color:rgb(63, 43, 79);
+  font-size: 10pt;
+  line-height: normal;
+  padding: 0px !important;
+  font-family: "Roboto";
+  background-color: none !important;
+}
+

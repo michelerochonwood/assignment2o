@@ -4,17 +4,17 @@ import Footer from "./views/shared/Footer";
 
 // page components
 import Home from "./views/Home";
-import About from "./views/About";
+import Skillset from "./views/Skillset";
 import Contact from "./views/Contact";
-import Services from "./views/Services";
-import Blog from "./views/Blog";
+import Portfolio from "./views/Portfolio";
+import References from "./views/References";
 import Post from "./views/Post";
 
 // dependencies
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createContext, useContext, useState } from "react"; // for sharing state between components
 
-// global Context (like a global or session var container)
+// global Context (like a global or session var container) - I'm not using the counter but I'm keeping it in case I want to add it later)
 export const CounterContext = createContext();
 
 function App() {
@@ -29,16 +29,16 @@ function App() {
       {/* wrap all components in the context so it can be shared among all */}
       <CounterContext.Provider value={{ sessionCounter, handleIncrement }}>
         {/* jsx comment style */}
-        <Header username='rfreeman' />
+        <Header username='mrochon' />
         <main>
           {/* use classes from react-router-dom to set up the url mapping for each page */}
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home username='mrochon' displayName='Michele' />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/skillset" element={<Skillset />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/references" element={<References />} />
               <Route path="/post/:id" element={<Post />} />
             </Routes>
           </BrowserRouter>

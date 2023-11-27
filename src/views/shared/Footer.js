@@ -2,10 +2,10 @@ import React from "react";
 
 function Footer() {
   const footerStyle = {
-    backgroundColor: "#343a40", // Assuming the background color is dark
-    color: "#fff", // Assuming the text color is light
-    padding: "1rem", // Adjust padding as needed
-    marginTop: "30px", // Adding a top margin of 30px
+    backgroundColor: "#343a40", 
+    color: "#fff", 
+    padding: "1rem", 
+    marginTop: "30px", 
   };
 
   return (

@@ -1,48 +1,64 @@
-
 import { useState, useEffect } from "react";
 import { Parser } from "html-to-react";
+import { Link } from "react-router-dom";
 
-function Blog() {
-    // var to hold the api data
-    const [blogPosts, setBlogPosts] = useState([]);
+function Reference() {
+  const [referencePosts, setReferencePosts] = useState([]);
+  const referenceIcon =
+    "https://raw.githubusercontent.com/michelerochonwood/imagesReact/main/reference.png";
 
-    // when component "mounts" (aka loads), get external api data using Fetch
-    // the [] at the end tells React to only run this effect ONCE when component mounts
-    useEffect(() => {
-        fetch('https://blog-demo-d7iq.onrender.com/api/posts')
-        .then((response) => response.json())
-        .then((referencePosts) => setReferencePosts(referencePosts));
-        console.log(referencePosts);
-    },[]);
-
-    return (
-        <div className="container">
-            <h1>Provide a reference</h1>
-            <a href="/create-post" className="btn btn-info mb-3">
-                <i className="bi bi-plus-circle"></i> Create New Reference
-            </a>
-            <ul className="list-group">
-                {blogPosts.map((post) => (
-                    <li className="list-group-item" key={post._id}>
-                        <h2><i className="bi bi-substack"></i> {post.title}</h2>
-                        <div>
-                            {Parser().parse((post.body).toString().substring(0,100))} ... 
-                            <a href={`/post/${post._id}`} className="btn btn-info float-end">
-                                <i className="bi bi-book"></i> Read More
-                            </a>
-                        </div>
-                        <div>
-                            Posted: 
-                                <span className="badge text-bg-secondary m-1">
-                                    {new Date(post.date).toLocaleString()}
-                                </span>
-                                by {post.username}
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/michelerochonwood/resumeData/main/referenceData.json"
     )
-}
+      .then((response) => response.json())
+      .then((referencePosts) => setReferencePosts(referencePosts))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
-export default Blog;
+  return (
+    <div className="container">
+      <h3>Add a reference for Michele</h3>
+      <ul className="list-group">
+        {referencePosts.map((post) => (
+          <li className="list-group-item" key={post.postId}>
+            <h5>
+              <img
+                src={referenceIcon}
+                alt="reference icon"
+                width="30px"
+                style={{ paddingTop: "5px", paddingBottom: "5px" }}
+              />{" "}
+              {post.name}
+            </h5>
+            <div>
+              <h6>
+                {post.position} | {post.organization}
+              </h6>
+            </div>
+            <div>
+              <p className="plainReferences">
+                {(post.content).toString().substring(0, 100)}...{" "}
+                <Link to={`/post/${post.postId}`} className="micheleButton">
+                  Read More
+                </Link>
+              </p>
+            </div>
+            <div>
+              <h6>Posted:</h6>
+              <span className="plainReferences">
+                {post.date &&
+                  new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+              </span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+                }
+export default Reference;

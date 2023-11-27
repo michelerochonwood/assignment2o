@@ -35,7 +35,7 @@ function Contact () {
     <div className="container">
         <h1>Contact Michele</h1>
         <p>tel: 613 716 6393</p>
-        <textarea placeholder="Send a message" onChange={handleChange}>{message}</textarea>
+        <textarea placeholder="Send a message" onChange={handleChange} rows="6" cols="125">{message}</textarea>
         l<div id="errorMessage" className="text-danger">{errorMessage}</div>
         <button className="btn btn-secondary" onClick={showMessageAlert}>submit</button>
         <p>Your message is: {message} </p>
