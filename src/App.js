@@ -4,11 +4,11 @@ import Footer from "./views/shared/Footer";
 
 // page components
 import Home from "./views/Home";
-import Skillset from "./views/Skillset";
 import Contact from "./views/Contact";
 import Portfolio from "./views/Portfolio";
 import References from "./views/References";
 import Post from "./views/Post";
+import AddReference from "./AddReference";
 
 // dependencies
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -35,11 +35,11 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home username='mrochon' displayName='Michele' />} />
-              <Route path="/skillset" element={<Skillset />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/references" element={<References />} />
               <Route path="/post/:id" element={<Post />} />
+              <Route path="/addreference/" element={<AddReference username='mrochon'/>} />
             </Routes>
           </BrowserRouter>
         </main>

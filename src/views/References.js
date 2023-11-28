@@ -19,6 +19,7 @@ function Reference() {
   return (
     <div className="container">
       <h3>Add a reference for Michele</h3>
+      <a href="/addReference" className="micheleButton2">Add a Reference</a>
       <ul className="list-group">
         {referencePosts.map((post) => (
           <li className="list-group-item" key={post.postId}>
@@ -60,5 +61,5 @@ function Reference() {
       </ul>
     </div>
   );
-                }
+   }
 export default Reference;

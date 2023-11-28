@@ -43,7 +43,7 @@ const michele3 = 'https://raw.githubusercontent.com/michelerochonwood/imagesReac
 
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/blog" id="blog">
+                    <a className="nav-link" href="/portfolio" id="portfolio">
                       Portfolio
                     </a>
                   </li>

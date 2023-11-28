@@ -32,6 +32,7 @@ footer {
   background-color: rgba(52, 25, 160, 0.3);
   padding: 20px;
   border-radius: 0px;
+  margin-bottom: 20px;
 }
 
 .carousel-caption h6 {
@@ -77,6 +78,7 @@ p {
 
 .centered-text {
   text-align: center;
+  margin: 0 auto; /* Center the container */
   /* Add other styles as needed */
 }
 
@@ -104,11 +106,57 @@ h3 {
   padding-top: 50px;
 }
 
+p.yellowheading {
+  color: rgb(245, 245, 174);
+  font-family: "Roboto";
+  font-size: "10pt";
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  line-height: 1;
+  font-size: 12px; /* or your preferred font size */
+  font-weight: 600;
+  background-color: transparent;
+  text-align: center;
+  /* Add other properties as needed */
+}
+
+p.greyheading {
+  color: rgb(165, 165, 163);
+  font-family: "Roboto";
+  font-size: "10pt";
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  line-height: 1;
+  font-size: 12px; /* or your preferred font size */
+  font-weight: 300;
+  background-color: transparent;
+  /* Add other properties as needed */
+}
+
+p.whiteheading {
+  color: rgb(250, 250, 250);
+  font-family: "Roboto";
+  font-size: "10pt";
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  line-height: 1;
+  font-size: 12px; /* or your preferred font size */
+  font-weight: 300;
+  background-color: transparent;
+  /* Add other properties as needed */
+}
+
 p.plain {
-  padding-left: 200px;
-  padding-right: 200px;
   font-size: 14pt;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
+  max-width: 800px; /* Adjust the max-width as needed */
+}
+
+.centered-accordion-button {
+  text-align: center !important;
 }
 
 p.plainAccordion {
@@ -159,6 +207,16 @@ p.plainAccordionDark {
   float: right;
 }
 
+.micheleButton2 {
+  color: white;
+  background-color: #343a40;
+  align-items: right;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
 p.plainReferences {
   color:rgb(63, 43, 79);
   font-size: 10pt;
@@ -168,3 +226,83 @@ p.plainReferences {
   background-color: none !important;
 }
 
+textarea {
+  width: 600px;
+  height: 250px;
+}
+
+label {
+  width: 150px;
+  vertical-align: center;
+}
+
+.list-group {
+  margin-top: 30px;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar is 200px, content takes the remaining space */
+}
+
+.skillbar {
+  width: 100%; /* Set the width of the sidebar to fill its grid cell */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(18, 18, 18); /* Set the background color of the sidebar */
+  overflow-y: auto; /* Allow the sidebar to scroll if its content exceeds the viewport */
+  padding: 5px;
+}
+
+.content {
+  padding-left: 20px; /* Adjust the padding to make room for the fixed sidebar */
+  overflow-y: auto; /* Allow the content to scroll if it exceeds the viewport height */
+  background-color: #000; /* Set the background color of the content area to black */
+  color: #fff; /* Set the text color to white or another color that contrasts with black */
+}
+
+
+
+.skillbar-title {
+  background-color: #1b1e20;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+}
+
+.skillbar-content {
+  background-color: #1b1e20;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  margin: 10px;
+  padding: 5px;
+}
+
+.animated-progress {
+  width: 175px;
+  height: 30px;
+  border-radius: 20px;
+  margin: 10px 10px 0px 0px;
+  border: 1px solid rgb(18, 18, 18);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+}
+
+.progress-yellow span {
+  background-color: rgb(245, 245, 174)
+}
