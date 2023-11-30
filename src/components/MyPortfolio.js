@@ -19,8 +19,13 @@ const MyPortfolio = () => {
         <div className="skillbar-content">
           <p className="yellowheading">FRONT END DEVELOPMENT</p>
           <p className="greyheading">HTML<AnimatedProgress level="Advanced" /></p>
-
+          <p className="greyheading">JavaScript<AnimatedProgress level="Intermediate" /></p>
+          <p className="greyheading">CSS<AnimatedProgress level="Advanced" /></p>
+          <p className="greyheading">PHP<AnimatedProgress level="Intermediate" /></p>
+          <p className="greyheading">WordPress<AnimatedProgress level="Intermediate" /></p>
+          <hr/>
         </div>
+
       </div>
       <div className="content">
         <h6>Stuff in the content</h6>

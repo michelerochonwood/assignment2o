@@ -9,6 +9,12 @@ h1 {
     font-size: 18pt;
     font-weight: 800;
 }
+
+h2 {
+  padding-top: 20px;
+  font-size: 22pt;
+  font-weight: 900;
+}
 body {
   font-family: 'Roboto', serif;
   margin-bottom: 200px; /* Add space at the bottom for the footer */
@@ -101,9 +107,11 @@ p {
 
 h3 {
   font-family: "Playfair";
-  font-size: 22pt;
-  font-weight: 800;
-  padding-top: 50px;
+  font-size: 18pt !important;
+  font-weight: 100;
+  padding-top: 15px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 p.yellowheading {
